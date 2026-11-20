@@ -3,7 +3,7 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 
 # حط التوكن الخاص بالبوت هنا
-TOKEN = os.getenv("8214897188:AAGuM4xCfGiKeQm_9vzT9r0SDXrFMLMUJxI")
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 
 # أمر /start
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -14,5 +14,5 @@ def main():
     app.add_handler(CommandHandler("start", start))
     app.run_polling()
 
-if name == "main":
+if __name__ == "__main__":
     main()
